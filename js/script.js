@@ -102,4 +102,10 @@ for (let i=0; i<3; i++) {
     }
 }
 
+if (humanScore > computerScore) {
+    console.log("You have WON the round!");
+} else {
+    console.log("You have LOST the round.");
+}
+
 playRound(humanSelection, computerSelection);
