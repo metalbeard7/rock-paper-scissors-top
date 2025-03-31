@@ -19,3 +19,21 @@ function getComputerChoice(){
 
 }
  
+//Create function to return a value based on user's input.
+    //Have user enter value in prompt.
+        //if (choice = Rock) log "Rock"
+        //if (choice <= Scissors) log "Scissors"
+        //if (choice <= Paper) log "Paper"
+
+function getHumanChoice() {
+   let choice = prompt("Rock, Paper, or Scissors?");
+   
+   if (choice === "Rock") { 
+    console.log("Rock");
+   } else if (choice === "Scissors") {
+    console.log("Scissors");
+   } else if (choice === "Paper") {
+    console.log("Paper");
+   }
+}
+
