@@ -21,6 +21,9 @@ function getHumanChoice() {
     return terminator;
     
 }
+
+//create a round of play, increment score and continue to next round
+
 //compare answers and determine a winner or tie
 function playRound(humanChoice, computerChoice) {
     let answer;
@@ -78,6 +81,25 @@ function playRound(humanChoice, computerChoice) {
         }
         return answer;
     }
-    
 
-//create a round of play, increment score and continue to next round
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+
+
+for (let i=0; i<3; i++) {
+    let answer;
+    let computerChoice = getComputerChoice();
+    let humanChoice = getHumanChoice();
+    answer = playRound(humanChoice, computerChoice);
+    switch(answer) {
+        case "win":
+            humanScore++;
+            break;
+        case "lost":
+            computerScore++;
+            break;
+    }
+}
+
+playRound(humanSelection, computerSelection);
