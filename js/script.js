@@ -16,8 +16,11 @@ function getComputerChoice() {
 }
 
 //take input from user and store it
-
+function getHumanChoice() {
+    let terminator = prompt("Rock, Paper, Scissors... your choice.");
+    return terminator;
+    
+}
 //compare answers and determine a winner or tie
 
 //create a round of play, increment score and continue to next round
-
