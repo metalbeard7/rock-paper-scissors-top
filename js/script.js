@@ -19,20 +19,7 @@ function getHumanChoice() {
     
 }
 
-for (let i=0; i<3; i++) {
-    let answer;
-    let computerChoice = getComputerChoice();
-    let humanChoice = getHumanChoice();
-    answer = playRound(humanChoice, computerChoice);
-    switch(answer) {
-        case "win":
-            humanScore++;
-            break;
-        case "lost":
-            computerScore++;
-            break;
-    }
-}
+
 
 
 //function for game that will house the rest of the game components.
@@ -104,7 +91,7 @@ function playGame() {
                     case "scissors":
                         console.log("human:", humanChoice);
                         console.log("computer:", computerChoice);
-                        console.log("Oh baby, we could do this all day, we should tie the knot.");
+                        console.log("We could do this all day, it's a tie.");
                         answer = "tie";
                         break;
                     case "paper":
@@ -120,12 +107,22 @@ function playGame() {
             return answer;
         }
 
-    //const humanSelection = getHumanChoice();
-    //const computerSelection = getComputerChoice();
 
+    for (let i=0; i<3; i++) {
+        let answer;
+        let computerChoice = getComputerChoice();
+        let humanChoice = getHumanChoice();
+        answer = playRound(humanChoice, computerChoice);
+        switch(answer) {
+            case "win":
+                humanScore++;
+                break;
+            case "lost":
+                computerScore++;
+                break;
+        }
+    }
 
-
-    playRound(humanChoice, computerChoice);
 
     if (humanScore > computerScore) {
         console.log("You have WON the round!");
